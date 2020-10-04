@@ -1,0 +1,9 @@
+04/10
+Foi criado um projeto em branco utilizando expo-init e iniciada a migração para o expo
+
+Navegação entre telas
+    Utilização do Navigation e criação das stacks em stacks/MainStack
+
+Estilos
+    Utilização  do Style components
+        facilita o tratamento de estilos, agrupado-os por nome 

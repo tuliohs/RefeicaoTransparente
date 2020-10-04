@@ -1,37 +1,40 @@
 import React from 'react';
-import styled from 'styled-components/native';
+import { StyleSheet, TextInput, View, IconSvg } from 'react-native';
 
-const InputArea = styled.view`
-    width: 100%;
-    height: 60px;
-    background-color: #FFF;
-    felx-direction: row;
-    border-radius: 30px;
-    padding-left: 15px;
-    align-items: center;
-    margin-bottom: 15px;
-    `;
-const Input = styled.TextImput`
-    flex: 1;
-    font-size: 16px;
-    color: #268596;
-    margin-left: 10px;
 
-`;
+export default ({ IconSvg, placeholder, value, onChangText, password }) => {
+    return (
+        <View style={styles.InputArea}>
+            {IconSvg}
+            <TextInput
+                placeholder={placeholder}
+                placeholderTextColor="#268596"
+                value={value}
+                onChangeText={onChangText}
+                secureTextEntry={password}
+                style={styles.Input}
+            />
+        </View>
 
-    export default ({IconSvg, placeholder, value, onChangText, password}) => {
-        return (
-            <InputArea>
-                <IconSvg width="24" height="24" fill="#268596" />
-                <Input 
-                    placeholder={placeholder}
-                    placeholderTextColor="#268596"
-                    value={value}
-                    onChangeText={onChangeText}
-                    secureTextEntry={password}
-                />
-            </InputArea>
+    );
 
-        );
+}
 
+const styles = StyleSheet.create({
+    InputArea: {
+        width: "100%",
+        height: "60px",
+        backgroundColor: "#FFF",
+        flexDirection: "row",
+        borderRadius: "30px",
+        paddingLeft: "15px",
+        alignItems: "center",
+        marginBottom: "15px"
+    },
+    Input: {
+        flex: 1,
+        fontSize: "16px",
+        color: "268596",
+        marginLeft: "10px"
     }
+});

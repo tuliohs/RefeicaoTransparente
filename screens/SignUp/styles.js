@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components/native';
+/*import styled from 'styled-components/native';
 
-export const Container = styled.SafeAreaView`; 
+export const Container = styled.SafeAreaView`;
 
 background-color: #368c8c;
     flex: 1;
@@ -40,4 +40,4 @@ export const SignMessageButtonBold = styled.Text`;
     font-size: 16px;
     color: #FFF;
     font-weight: bold;
-    `;
+    `;*/

@@ -1,44 +1,40 @@
-import React from 'react';
-import styled from 'styled-components/native';
+import { StyleSheet } from 'react-native';
 
-export const Container = styled.SafeAreaView`; 
-
-background-color: #368c8c;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-`;
-export const InputArea = styled.View`;
-    widht: 100%;
-    padding: 40px;
-`;
-
-export const CustomButton = styled.TouchableOpacity`
-    height: 60px;
-    background-color: #368c8c;
-    border-radius: 30px;
-    justify-content: center;
-    align-items: center;
-`;
-export const CustomButtonText = styled.Text`
-    font-size: 18px;
-    color: #FFF;
-`;
-
-export const SignMessageButton = styled.touchableOpacity`
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
-`;
-
-export const SignMessageButtonText = styled.Text`
-    font-size: 16px;
-    color: #FFF;
-`;
-export const SignMessageButtonBold = styled.Text`
-    font-size: 16px;
-    color: #FFF;
-    font-weight: bold;
-`;
-
+export const styles = StyleSheet.create({
+    Container: {
+        backgroundColor: "#368c8c",
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    InputArea: {
+        widht: "100%",
+        padding: "40px",
+    },
+    CustomButton: {
+        height: "60px",
+        backgroundColor: "#368c8c",
+        borderRadius: "30px",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    CustomButtonText: {
+        fontSize: "18px",
+        color: "#FFF"
+    },
+    SignMessageButton: {
+        flexDirection: "row",
+        justifyContent: "center",
+        marginTop: "50px",
+        marginBottom: "20px"
+    },
+    SignMessageButtonText: {
+        fontSize: "16px",
+        color: "#FFF"
+    },
+    SignMessageButtonBold: {
+        fontSize: "16px",
+        color: "#FFF",
+        fontWeight: "bold"
+    }
+}); 
