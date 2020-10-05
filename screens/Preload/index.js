@@ -10,25 +10,24 @@ export default () => {
 
     const navigation = useNavigation();
 
-    useEffect(()=>{
+    useEffect(() => {
         const checkToken = async () => {
             const token = await AsyncStorage.getItem('token');
-            if(token) {
-                
-             } else {
+            if (token) {
+
+            } else {
 
                 navigation.navigate('SignIn');
-                
             }
         }
         checkToken();
-        
+
     }, []);
 
     return (
         <Container>
-           <RefTransLogo width="100%" height="160" />
-           <LoadingIcon size="large" color="#ffffff" />
+            <RefTransLogo width="100%" height="160" />
+            <LoadingIcon size="large" color="#ffffff" />
         </Container>
     );
 }

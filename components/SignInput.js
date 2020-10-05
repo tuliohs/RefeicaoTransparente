@@ -1,8 +1,9 @@
-import React from 'react';
-import { StyleSheet, TextInput, View, IconSvg } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, TextInput, View } from 'react-native';
 
+export default ({ IconSvg, placeholder, value, change, password }) => {
+    const [tex, setTex] = useState('');
 
-export default ({ IconSvg, placeholder, value, onChangText, password }) => {
     return (
         <View style={styles.InputArea}>
             {IconSvg}
@@ -10,14 +11,12 @@ export default ({ IconSvg, placeholder, value, onChangText, password }) => {
                 placeholder={placeholder}
                 placeholderTextColor="#268596"
                 value={value}
-                onChangeText={onChangText}
+                onChangeText={c => change(c)}
                 secureTextEntry={password}
                 style={styles.Input}
             />
         </View>
-
     );
-
 }
 
 const styles = StyleSheet.create({

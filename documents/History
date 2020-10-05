@@ -5,5 +5,6 @@ Navegação entre telas
     Utilização do Navigation e criação das stacks em stacks/MainStack
 
 Estilos
-    Utilização  do Style components
-        facilita o tratamento de estilos, agrupado-os por nome 
+    Utilização do Style-components
+        facilita o tratamento de estilos, agrupado-os por nome, porém esta se tornando obsoleto no react-native
+        e a tendência é ser substituido pelo styleSheets
