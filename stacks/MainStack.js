@@ -11,7 +11,7 @@ import SignUpScreen from '../screens/SignUp/SignUpScreen'
 const Stack = createStackNavigator();
 
 const MainStack = () => {
-    return <Stack.Navigator initialRouteName="SingUp" headerMode="none">
+    return <Stack.Navigator initialRouteName="Home" headerMode="none">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="SignIn" component={SignInSreen} />
         <Stack.Screen name="SingUp" component={SignUpScreen} />

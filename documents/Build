@@ -1,0 +1,16 @@
+PRÉ-REQUISITOS
+    1-Node
+        Caso não tenha instalado, o download pode ser encontrado em: https://nodejs.org/en/download/
+    2-yarn
+        executar no prompt de comando: "npm install -g yarn" (O node já deve estar instalado)
+
+Passo 1:
+    Instalar o expo de de forma global
+        1.1 - Digitar no prompt de comando: "npm global expo-cli" OU "yarn global expo-cli"
+Passo 2:
+    Navegar até a pasta com Prompt de comando
+        2.1 - Exemplo "cd sistemas/RefeicaoTransparente"
+        2.2 - Rodar o comando "expo start" OU "yarn start"
+Passo 3:
+    Após ser aberto a tela do expo no navegador, escolher a opção: "Run in web browser"
+    
