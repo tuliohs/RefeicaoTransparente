@@ -13,4 +13,14 @@ Passo 2:
         2.2 - Rodar o comando "expo start" OU "yarn start"
 Passo 3:
     Após ser aberto a tela do expo no navegador, escolher a opção: "Run in web browser"
-    
+
+
+
+
+NÃO EXECUTAR OS COMANDOS ABAIXO
+
+expo login
+expo build:android
+
+expo eject - para abandonar o expo
+expo update - atualiza a versão
