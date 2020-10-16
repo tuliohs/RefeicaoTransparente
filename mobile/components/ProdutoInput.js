@@ -19,18 +19,18 @@ const Input = styled.TextImput`
 
 `;
 
-    export default ({IconSvg, placeholder, value, onChangText}) => {
-        return (
-            <InputArea>
-                <IconSvg width="24" height="24" fill="#268596" />
-                <Input 
-                    placeholder={placeholder}
-                    placeholderTextColor="#268596"
-                    value={value}
-                    onChangeText={onChangeText}
-                />
-            </InputArea>
+export default ({ IconSvg, placeholder, value, onChangText }) => {
+    return (
+        <InputArea>
+            <IconSvg width="24" height="24" fill="#268596" />
+            <Input
+                placeholder={placeholder}
+                placeholderTextColor="#268596"
+                value={value}
+                onChangeText={onChangeText}
+            />
+        </InputArea>
 
-        );
+    );
 
-    }
+}

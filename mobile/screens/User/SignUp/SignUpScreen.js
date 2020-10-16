@@ -10,7 +10,7 @@ import {
     SignMessageButtonTextBold
 
 } from './styles';
-import SignInput from '../../components/SignInput';
+import SignInput from '../../../components/SignInput';
 
 const SignUpScreen = () => {
 

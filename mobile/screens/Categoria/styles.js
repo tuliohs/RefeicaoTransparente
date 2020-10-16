@@ -4,23 +4,24 @@ import styled from 'styled-components/native';
 export const Container = styled.SafeAreaView`;
     font-size: 15px;
     color: #FFF;
-    background-color: #368c8c;
+    background-color: #7fa48f;
     flex: 1
-    
-    justify-content:center;
+    justify-content: center
     align-items: center;
    
     
 `;
 export const InputArea = styled.View`
     width: 100%;
-    padding: 40px; 
+    padding: 40px;
+    
+    
 `;
 
 export const CustomButton = styled.TouchableOpacity`
     height: 30px;
     width: 150px;
-    background-color: #fff;
+    background-color: #698c79;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -30,7 +31,7 @@ export const CustomButton = styled.TouchableOpacity`
 export const CustomButtonText = styled.Text`
     justfiy-content: center
     font-size: 15px;
-    color: #1C1C1C;
+    color: #FFF;
     margin-bottom:5px;
     margin-top: 5px;
 `;

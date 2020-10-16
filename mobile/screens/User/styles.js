@@ -8,18 +8,18 @@ export const styles = StyleSheet.create({
         alignItems: "center",
     },
     InputArea: {
-        widht: "100%",
+        width: "100%",
         padding: "40px",
     },
     CustomButton: {
         height: "60px",
         backgroundColor: "#368c8c",
-        borderRadius: "30px",
+        borderRadius: 30,
         justifyContent: "center",
         alignItems: "center",
     },
     CustomButtonText: {
-        fontSize: "18px",
+        fontSize: 18,
         color: "#FFF"
     },
     SignMessageButton: {
@@ -29,11 +29,11 @@ export const styles = StyleSheet.create({
         marginBottom: "20px"
     },
     SignMessageButtonText: {
-        fontSize: "16px",
+        fontSize: 16,
         color: "#FFF"
     },
     SignMessageButtonBold: {
-        fontSize: "16px",
+        fontSize: 16,
         color: "#FFF",
         fontWeight: "bold"
     }

@@ -25,15 +25,15 @@ const styles = StyleSheet.create({
         height: "60px",
         backgroundColor: "#FFF",
         flexDirection: "row",
-        borderRadius: "30px",
+        borderRadius: 30,
         paddingLeft: "15px",
         alignItems: "center",
         marginBottom: "15px"
     },
     Input: {
         flex: 1,
-        fontSize: "16px",
-        color: "268596",
+        fontSize: 16,
+        color: "#268596",
         marginLeft: "10px"
     }
 });

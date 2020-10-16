@@ -9,7 +9,7 @@ background-color: #368c8c;
     align-items: center;
 `;
 export const InputArea = styled.View`;
-    widht: 100%;
+    width: 100%;
     padding: 40px;
 `;
 

@@ -6,33 +6,27 @@ export const Container = styled.SafeAreaView`;
     color: #FFF;
     background-color: #368c8c;
     flex: 1
-    
-    justify-content:center;
+    justify-content: center
     align-items: center;
    
-    
-`;
+   `;
 export const InputArea = styled.View`
     width: 100%;
-    padding: 40px; 
+    padding: 40px;
+    background-color: #368c8c;
+    
 `;
 
 export const CustomButton = styled.TouchableOpacity`
-    height: 30px;
-    width: 150px;
-    background-color: #fff;
-    border-radius: 10px;
+    height: 40px;
+    background-color: #FFF;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    
 `;
 export const CustomButtonText = styled.Text`
-    justfiy-content: center
-    font-size: 15px;
+    font-size: 20px;
     color: #1C1C1C;
-    margin-bottom:5px;
-    margin-top: 5px;
 `;
 
 export const ProdutosMessageButton = styled.TouchableOpacity`
@@ -40,19 +34,5 @@ export const ProdutosMessageButton = styled.TouchableOpacity`
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 20px;
-    
 `;
-
-
-
-
-
-/*export const Container = styled.SafeAreaView`;
-    font-size: 18px;
-    color: #FFF;
-    background-color: #368c8c;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-`;*/
 
