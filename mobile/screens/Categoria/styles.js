@@ -13,14 +13,14 @@ export const Container = styled.SafeAreaView`;
 `;
 export const InputArea = styled.View`
     width: 100%;
-    padding: 40px;
+    padding: 40;
     
     
 `;
 
 export const CustomButton = styled.TouchableOpacity`
     height: 30px;
-    width: 150px;
+    width: 150;
     background-color: #698c79;
     border-radius: 10px;
     justify-content: center;
@@ -39,8 +39,8 @@ export const CustomButtonText = styled.Text`
 export const ProdutosMessageButton = styled.TouchableOpacity`
     flex-direction: row;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 50;
+    margin-bottom: 20;
     
 `;
 

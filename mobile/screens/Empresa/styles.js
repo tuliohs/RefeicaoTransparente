@@ -10,11 +10,11 @@ background-color: #368c8c;
 `;
 export const InputArea = styled.View`;
     width: 100%;
-    padding: 40px;
+    padding: 40;
 `;
 
 export const CustomButton = styled.TouchableOpacity`;
-    height: 60px;
+    height: 60;
     background-color: #368c8c;
     border-radius: 30px;
     justify-content: center;
@@ -28,7 +28,7 @@ export const CustomButtonText = styled.Text`;
 export const ProdutoMessageButton = styled.touchableOpacity`;
     flex-direction: row;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 50;
+    margin-bottom: 20;
 `;
 

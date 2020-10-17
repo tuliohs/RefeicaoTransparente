@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import {
-    Container,
-    InputArea,
-    CustomButton,
-    CustomButtonText,
-    SignMessageButton,
-    SignMessageButtonText,
-    SignMessageButtonTextBold
+//import {
+//    Container,
+//    InputArea,
+//    CustomButton,
+//    CustomButtonText,
+//    SignMessageButton,
+//    SignMessageButtonText,
+//    SignMessageButtonTextBold
 
-} from './styles';
+//} from './styles';
+import { styles } from '../styles'
+
+import {
+    SafeAreaView,
+    View,
+    TouchableOpacity,
+    Text,
+    Button,
+    Alert
+} from 'react-native'
+
 import SignInput from '../../../components/SignInput';
 
 const SignUpScreen = () => {
@@ -25,9 +36,9 @@ const SignUpScreen = () => {
         navigation.navigate('SignIn')
     }
     return (
-        <Container>
-            <refTransLogo width="100%" heigth="160" />
-            <InputArea>
+        <SafeAreaView style={styles.Container}>
+            {/*<refTransLogo width="100%" heigth="160" />*/}
+            <View style={styles.InputArea}>
                 <SignInput
                     IconSvg={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none" /><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>}
                     placeholder="Digite seu nome"
@@ -46,15 +57,15 @@ const SignUpScreen = () => {
                     value={passwordField}
                     change={setPasswordlField}
                     password={true} />
-                <CustomButton onPress={handleSingUpClick}>
-                    <CustomButtonText>CADASTRAR</CustomButtonText>
-                </CustomButton>
-            </InputArea>
-            <SignMessageButton onPress={handleMessageButtonClick}>
-                <SignMessageButtonText>Já possui uma conta? </SignMessageButtonText>
-                <SignMessageButtonTextBold>Faça Login!</SignMessageButtonTextBold>
-            </SignMessageButton>
-        </Container >
+                <TouchableOpacity style={styles.CustomButton} onPress={handleSingUpClick}>
+                    <Text style={styles.CustomButtonText}>CADASTRAR</Text>
+                </TouchableOpacity >
+            </View>
+            <TouchableOpacity style={styles.SignMessageButton} onPress={handleMessageButtonClick}>
+                <Text style={styles.SignMessageButtonText}>Já possui uma conta?</Text>
+                <Text style={styles.SignMessageButtonBold}>Faça Login!</Text>
+            </TouchableOpacity>
+        </SafeAreaView >
     );
 }
 

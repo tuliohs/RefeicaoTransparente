@@ -9,10 +9,10 @@ export const styles = StyleSheet.create({
     },
     InputArea: {
         width: "100%",
-        padding: "40px",
+        padding: 40,
     },
     CustomButton: {
-        height: "60px",
+        height: 60,
         backgroundColor: "#368c8c",
         borderRadius: 30,
         justifyContent: "center",
@@ -25,8 +25,8 @@ export const styles = StyleSheet.create({
     SignMessageButton: {
         flexDirection: "row",
         justifyContent: "center",
-        marginTop: "50px",
-        marginBottom: "20px"
+        marginTop: 50,
+        marginBottom: 20
     },
     SignMessageButtonText: {
         fontSize: 16,

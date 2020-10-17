@@ -9,6 +9,6 @@ background-color: #368c8c;
     align-items: center;
 `;
 export const LoadingIcon = styled.ActivityIndicator`
-    margin-top: 50px;
+    margin-top: 50;
 
 `;

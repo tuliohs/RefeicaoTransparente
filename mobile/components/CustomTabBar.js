@@ -6,7 +6,7 @@ import ContatoIcon from '../assets/today.svg';
 import Search from '../assets/search.svg';*/
 
 const TabArea = styled.View`
-    height: 60px;
+    height: 60;
     background-color: #368c8c;
     flex-direction: row
 `;

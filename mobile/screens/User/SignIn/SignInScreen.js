@@ -4,59 +4,29 @@ import {
     View,
     TouchableOpacity,
     Text,
-    Button,
     Alert
 } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 
 import { styles } from '../styles'
 import SignInput from '../../../components/SignInput';
-
-//import refTransLogo from '../../assets/Logo.svg';
 import EmailIcon from '../../../assets/email.svg';
 import LockIcon from '../../../assets/lock.svg';
 
 const LoginScreen = () => {
-
-    const [modalVisible, setModalVisible] = useState(false);
     const navigation = useNavigation();
     const [emailField, setEmailField] = useState('');
     const [passwordField, setPasswordlField] = useState('');
-
-    const messageAlert = () =>
-        console.log('adf')
-    Alert.alert(
-        'Alert Title',
-        'My Alert Msg',
-        [
-            {
-                text: 'Ask me later',
-                onPress: () => console.log('Ask me later pressed')
-            },
-            {
-                text: 'Cancel',
-                onPress: () => console.log('Cancel Pressed'),
-                style: 'cancel'
-            },
-            { text: 'OK', onPress: () => console.log('OK Pressed') }
-        ],
-        { cancelable: false }
+    const messageAlert = (message) => Alert.alert(
+        'Atenção',
+        message,
+        { text: 'OK', onPress: () => console.log('OK Pressed') }
     );
-
-
     const handleSignClick = () => {
         if (emailField === 'admin' && passwordField === 'admin')
             navigation.navigate('Home')
-        else messageAlert()
+        else messageAlert('Usuario ou Senha Inválidos')
     }
-
-    const handleMessageButtonClick = () => {
-        /*navigation.reset({
-            routes: [{ nome: 'SignUp' }]
-        });*/
-        navigation.navigate('SingUp')
-    }
-
     return (
         <SafeAreaView style={styles.Container}>
             <View style={styles.InputArea}  >
@@ -70,11 +40,11 @@ const LoginScreen = () => {
                     value={passwordField}
                     change={setPasswordlField}
                     password={true} />
-                <TouchableOpacity style={styles.CustomButton} onPress={messageAlert}>
+                <TouchableOpacity style={styles.CustomButton} onPress={() => handleSignClick()}>
                     <Text style={styles.CustomButtonText}> LOGIN</Text>
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.SignMessageButton} onPress={handleMessageButtonClick}>
+            <TouchableOpacity style={styles.SignMessageButton} onPress={() => navigation.navigate('Auth')}>
                 <Text style={styles.SignMessageButtonText}>Criar Usuário e Senha.</Text>
                 <Text style={styles.SignMessageButtonBold}>Aqui!</Text>
             </TouchableOpacity>

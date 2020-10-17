@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 
 const InputArea = styled.view`
     width: 100%;
-    height: 60px;
+    height: 60;
     background-color: #FFF;
     felx-direction: row;
     border-radius: 30px;
