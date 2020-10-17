@@ -28,7 +28,7 @@ export const CustomButton = styled.TouchableOpacity`
     
 `;
 export const CustomButtonText = styled.Text`
-    justfiy-content: center
+    justfiy-content: center;
     font-size: 15px;
     color: #1C1C1C;
     margin-bottom:5px;

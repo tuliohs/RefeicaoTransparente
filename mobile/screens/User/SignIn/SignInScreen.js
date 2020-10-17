@@ -23,8 +23,10 @@ const LoginScreen = () => {
         { text: 'OK', onPress: () => console.log('OK Pressed') }
     );
     const handleSignClick = () => {
+        navigation.navigate('Auth')
+        return;
         if (emailField === 'admin' && passwordField === 'admin')
-            navigation.navigate('Home')
+            navigation.navigate('Auth')
         else messageAlert('Usuario ou Senha Inválidos')
     }
     return (
@@ -44,7 +46,7 @@ const LoginScreen = () => {
                     <Text style={styles.CustomButtonText}> LOGIN</Text>
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.SignMessageButton} onPress={() => navigation.navigate('Auth')}>
+            <TouchableOpacity style={styles.SignMessageButton} onPress={() => navigation.navigate('SingUp')}>
                 <Text style={styles.SignMessageButtonText}>Criar Usuário e Senha.</Text>
                 <Text style={styles.SignMessageButtonBold}>Aqui!</Text>
             </TouchableOpacity>
