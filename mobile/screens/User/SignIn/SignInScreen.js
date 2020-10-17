@@ -23,8 +23,6 @@ const LoginScreen = () => {
         { text: 'OK', onPress: () => console.log('OK Pressed') }
     );
     const handleSignClick = () => {
-        navigation.navigate('Auth')
-        return;
         if (emailField === 'admin' && passwordField === 'admin')
             navigation.navigate('Auth')
         else messageAlert('Usuario ou Senha Inválidos')

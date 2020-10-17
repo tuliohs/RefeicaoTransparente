@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
-import { Image, View, Text } from 'react-native'
+import React from 'react';
+import { View, Text } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 import {
-    styleSheet,
-    text,
     Container,
-    InputArea,
     CustomButton,
     CustomButtonText,
-    ProdutosMessageButton,
-    ProdutosMessageButtonText,
-    // ProdutosMessageButtonTextBold
 } from './styles';
-//import Logo from '../../ assets/Logo.svg';
+
+import Header from '../../components/Header'
 
 export default function Home() {
     const navigation = useNavigation();
@@ -41,7 +36,8 @@ export default function Home() {
     }
 
     return (
-        <Container><View><Image source={require('../../assets/Logo.svg')} /><Text>HOME</Text></View>
+        <Container>
+            <Header title={"Home"} />
             <CustomButton onPress={handleMessageClick}>
                 <CustomButtonText>ABACATE</CustomButtonText>
             </CustomButton>
