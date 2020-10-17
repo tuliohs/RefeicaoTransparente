@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`;
-    font-size: 15;
+    /*font-size: 15;*/
     color: #FFF;
     background-color: #368c8c;
     flex: 1;    
     justify-content:flex-start;
-    align-items: center;
+    /*align-items: center;*/
 `;
 export const InputArea = styled.View`
     width: 100%;

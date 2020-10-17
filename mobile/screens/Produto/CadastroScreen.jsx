@@ -5,20 +5,13 @@ import {
     InputArea,
     CustomButton,
     CustomButtonText,
-    ProdutosMessageButton,
-    ProdutosMessageButtonText,
-    ProdutosMessageButtonTextBold
 } from './styles';
 
-
-import SignInput from '../../../components/SignInput';
-//import refTransLogo from '../../assets/Logo.svg';
-
+import SignInput from '../../components/SignInput';
 
 export default function CadastroScreen() {
 
     const navigation = useNavigation();
-
     const [produtosField, setProdutosField] = useState('');
     const [tipoField, setTipoField] = useState('');
     const [valorField, setValorlField] = useState('');

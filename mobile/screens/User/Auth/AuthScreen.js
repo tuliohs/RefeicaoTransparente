@@ -27,7 +27,6 @@ export default function AuthScreen() {
 
     const handleBarCodeScanned = ({ type, data }) => {
         setScanned(true);
-        // alert(`Bar code with type ${type} and data ${data} has been scanned!`);
         validation(data)
     };
 
@@ -39,7 +38,7 @@ export default function AuthScreen() {
     }
     return (
         <SafeAreaView style={styles.body} >
-            <Header title="Aproxime do QRCode" />
+            <Header subTitle="Aproxime do QRCode" />
             <View style={{ flex: 1 }}>
                 <BarCodeScanner
                     onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}

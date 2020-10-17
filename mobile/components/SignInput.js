@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, TextInput, View, Image } from 'react-native';
 
 export default ({ icon, placeholder, value, change, password }) => {
-    //const [tex, setTex] = useState('');
 
     return (
         <View style={styles.InputArea}>

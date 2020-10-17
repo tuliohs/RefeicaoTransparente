@@ -1,21 +1,15 @@
 import React from 'react'
-import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+import { Avatar, Card, IconButton } from 'react-native-paper';
 
-const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
-
-export default function SimpleCard() {
+export default function SimpleCard({ title, subTitle, action }) {
+    const navigation = useNavigation()
     return (
-        <Card>
-            <Card.Title title="Card Title" subtitle="Card Subtitle" left={LeftContent} />
-            <Card.Content>
-                <Title>Card title</Title>
-                <Paragraph>Card content</Paragraph>
-            </Card.Content>
-            <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
-            <Card.Actions>
-                <Button>Cancel</Button>
-                <Button>Ok</Button>
-            </Card.Actions>
-        </Card>
+        <Card.Title
+            title={title}
+            subtitle={subTitle}
+            left={(props) => <Avatar.Icon {...props} icon="folder" style={{ backgroundColor: "#368c8c" }} />}
+            right={(props) => <IconButton {...props} icon="equal" onPress={() => navigation.navigate('Produto')} />}
+        />
     );
 }
