@@ -44,15 +44,14 @@ export default function Home() {
             <CustomButton onPress={handleMessageButtonClick}>
                 <CustomButtonText>RABANETE</CustomButtonText>
             </CustomButton>
-            <CustomButton onPress={handleCadastro}>
-                <CustomButtonText>Cadastrar Produtos</CustomButtonText>
-            </CustomButton>
-            <CustomButton onPress={handleSignInMessageClick}>
-                <CustomButtonText>Cadastrar Empresa</CustomButtonText>
-            </CustomButton>
-            <CustomButton onPress={handleSignInScreenClick}>
-                <CustomButtonText>Voltar</CustomButtonText>
-            </CustomButton>
+            <View style={{ flex: 1, flexDirection: "row" }}>
+                <CustomButton onPress={handleCadastro}>
+                    <CustomButtonText>Cadastrar Produto</CustomButtonText>
+                </CustomButton>
+                <CustomButton onPress={handleSignInMessageClick}>
+                    <CustomButtonText>Cadastrar Empresa</CustomButtonText>
+                </CustomButton>
+            </View>
         </Container>
     );
 }

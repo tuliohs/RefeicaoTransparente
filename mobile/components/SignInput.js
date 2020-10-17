@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, TextInput, View, Image } from 'react-native';
 
-export default ({ IconSvg, placeholder, value, change, password }) => {
+export default ({ icon, placeholder, value, change, password }) => {
     //const [tex, setTex] = useState('');
 
     return (
         <View style={styles.InputArea}>
-            {/*<View>{IconSvg}</View>*/}
+            <Image source={icon} />
             <TextInput
                 placeholder={placeholder}
                 placeholderTextColor="#268596"

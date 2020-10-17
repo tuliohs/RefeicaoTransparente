@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, SafeAreaView, Button, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, SafeAreaView, Button } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import BarcodeMask from 'react-native-barcode-mask';
 import { useNavigation } from '@react-navigation/native';
+import Header from '../../../components/Header'
 
 export default function AuthScreen() {
     const navigation = useNavigation();
@@ -38,7 +39,7 @@ export default function AuthScreen() {
     }
     return (
         <SafeAreaView style={styles.body} >
-            <View style={[styles.header]}><Button title="back" onPress={() => navigation.navigate('SignIn')}></Button><Text style={styles.title}>Aproxime o QRCode da camera</Text></View>
+            <Header title="Aproxime do QRCode" />
             <View style={{ flex: 1 }}>
                 <BarCodeScanner
                     onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
@@ -67,17 +68,9 @@ const styles = StyleSheet.create({
         height: 1,
         width: '80%',
     },
-    header: {
-        flexDirection: "row",
-        borderRadius: 30,
-        paddingLeft: 15,
-        textAlign: "right",
-        height: "10%",
-        alignItems: "center",
-        marginTop: 15
-    },
     body: {
         flex: 1,
-        paddingTop: 0
+        paddingTop: 0,
+        padding: 20
     }
 });

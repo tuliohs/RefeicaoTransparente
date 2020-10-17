@@ -10,8 +10,8 @@ import { useNavigation } from '@react-navigation/native';
 
 import { styles } from '../styles'
 import SignInput from '../../../components/SignInput';
-import EmailIcon from '../../../assets/email.svg';
-import LockIcon from '../../../assets/lock.svg';
+import EmailIcon from '../../../assets/email.png';
+import LockIcon from '../../../assets/lock.png';
 
 const LoginScreen = () => {
     const navigation = useNavigation();
@@ -23,19 +23,19 @@ const LoginScreen = () => {
         { text: 'OK', onPress: () => console.log('OK Pressed') }
     );
     const handleSignClick = () => {
-        if (emailField === 'admin' && passwordField === 'admin')
+        if (emailField.toUpperCase() === 'ADMIN2' && passwordField === 'admin')
             navigation.navigate('Auth')
         else messageAlert('Usuario ou Senha Inválidos')
     }
     return (
         <SafeAreaView style={styles.Container}>
             <View style={styles.InputArea}  >
-                <SignInput IconSvg={EmailIcon}
+                <SignInput icon={EmailIcon}
                     placeholder="Digite seu e-mail"
                     value={emailField}
                     change={setEmailField}
                 />
-                <SignInput IconSvg={LockIcon}
+                <SignInput icon={LockIcon}
                     placeholder="Digite sua senha"
                     value={passwordField}
                     change={setPasswordlField}
