@@ -4,11 +4,13 @@ import { BarCodeScanner } from 'expo-barcode-scanner';
 import BarcodeMask from 'react-native-barcode-mask';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../../../components/Header'
+import Modal from '../../../components/Modal/Modal'
 
 export default function AuthScreen() {
     const navigation = useNavigation();
     const [hasPermission, setHasPermission] = useState(null);
     const [scanned, setScanned] = useState(false);
+    const [showModal, setShowModal] = useState(false)
 
     useEffect(() => {
         (async () => {
@@ -20,7 +22,7 @@ export default function AuthScreen() {
     const validation = (result) => {
         console.log(result)
         if (result === "ABCDE-12345-A2A4" || result === "EDASA-85987-A1A4" || result === "OSIXV-23497-A4A4" || result === "POQWE-32184-A3A4") {
-            navigation.navigate('Home');
+            setShowModal(true)
         }
         else alert("Codigo Inválido")
     }
@@ -29,6 +31,10 @@ export default function AuthScreen() {
         setScanned(true);
         validation(data)
     };
+    const closeModal = () => {
+        setShowModal(false)
+        navigation.navigate('Home');
+    }
 
     if (hasPermission === null) {
         return <Text>Requesting for camera permission</Text>;
@@ -38,7 +44,7 @@ export default function AuthScreen() {
     }
     return (
         <SafeAreaView style={styles.body} >
-            <Header subTitle="Aproxime do QRCode" />
+            <Header subTitle="Autenticação com QRCode" />
             <View style={{ flex: 1 }}>
                 <BarCodeScanner
                     onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
@@ -47,6 +53,11 @@ export default function AuthScreen() {
                     {scanned && <Button title={'Tap to Scan Again'} onPress={() => setScanned(false)} />}
                 </BarCodeScanner>
             </View>
+            <Modal
+                mensagem="Parabéns você fez a utilização da autenticação em dois fatores"
+                show={showModal}
+                close={closeModal}
+            />
         </SafeAreaView >
     );
 }

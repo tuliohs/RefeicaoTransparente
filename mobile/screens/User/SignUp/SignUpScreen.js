@@ -22,6 +22,7 @@ const SignUpScreen = () => {
     const [passwordField, setPasswordlField] = useState('');
 
     const handleSingUpClick = () => {
+        alert("FUNÇÃO NÃO IMPLEMENTADA FAVOR ACESSAR UTILIZANDO O USUARIO 'admin' E SENHA 'admin'")
     }
     const handleMessageButtonClick = () => navigation.goBack()
 

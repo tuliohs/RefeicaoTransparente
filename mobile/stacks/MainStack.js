@@ -17,7 +17,7 @@ import CadastroScreen from '../screens/Produto/CadastroScreen'
 const Stack = createStackNavigator();
 
 const MainStack = () => {
-    return <Stack.Navigator initialRouteName="Home" headerMode="none">
+    return <Stack.Navigator initialRouteName="SignIn" headerMode="none">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="SignIn" component={SignInScreen} />
         <Stack.Screen name="Auth" component={AuthScreen} />

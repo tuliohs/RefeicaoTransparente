@@ -58,7 +58,7 @@ const Modal = ({ show, close, mensagem }) => {
                 </Text>
 
                 <TouchableOpacity style={styles.btn} onPress={close}>
-                    <Text style={{ color: '#fff' }}>Close</Text>
+                    <Text style={{ color: '#fff' }}>Acessar App</Text>
                 </TouchableOpacity>
             </Animated.View>
         </Animated.View>
@@ -70,7 +70,9 @@ const styles = StyleSheet.create({
         width: '50%',
         height: '50%',
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        position: 'absolute'
+        position: 'absolute',
+        marginLeft: '20%',
+        marginTop: '30%',
     },
     modal: {
         //bottom: 0,
@@ -89,7 +91,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ccc',
         borderRadius: 50,
         alignSelf: 'center',
-        marginTop: 5
+        marginTop: 5,
     },
     text: {
         marginTop: 50,
@@ -102,13 +104,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#9b59b6',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 30
+        marginTop: 30,
     },
     centeredView: {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 22
+        marginTop: 22,
     },
     modalView: {
         margin: 20,
@@ -119,7 +121,7 @@ const styles = StyleSheet.create({
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 2
+            height: 2,
         },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
@@ -129,7 +131,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#F194FF",
         borderRadius: 20,
         padding: 10,
-        elevation: 2
+        elevation: 2,
     },
     textStyle: {
         color: "white",
